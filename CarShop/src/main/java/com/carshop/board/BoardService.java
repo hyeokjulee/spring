@@ -1,4 +1,4 @@
-package com.carshop.controller;
+package com.carshop.board;
 
 import java.util.List;
 

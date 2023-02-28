@@ -1,4 +1,4 @@
-package com.carshop.controller;
+package com.carshop.board;
 
 public class BoardDTO {
 	private String btitle, bcontent, bauthor, date;

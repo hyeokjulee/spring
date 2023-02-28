@@ -1,4 +1,4 @@
-package com.carshop.controller;
+package com.carshop.board;
 
 import java.util.*;
 
@@ -9,9 +9,9 @@ public class BoardRepositoryImpl implements BoardRepository {
 	private List<BoardDTO> listOfBoards = new ArrayList<BoardDTO>();
 	
 	public BoardRepositoryImpl() {
-		BoardDTO board1 = new BoardDTO("글","글","홍","오늘");
-		BoardDTO board2 = new BoardDTO("제","내","길","내일");
-		BoardDTO board3 = new BoardDTO("목","용","동","어제");
+		BoardDTO board1 = new BoardDTO("안녕하세요","반갑습니다","austin","02/28/2023");
+		BoardDTO board2 = new BoardDTO("hi","hello","andy","02/27/2023");
+		BoardDTO board3 = new BoardDTO("방가","신입회원입니다","신입","02/26/2023");
 		
 		listOfBoards.add(board1);
 		listOfBoards.add(board2);
