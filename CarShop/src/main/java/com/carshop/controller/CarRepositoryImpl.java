@@ -28,12 +28,37 @@ public class CarRepositoryImpl implements CarRepository {
 	@Override
 	public List<CarDTO> getCarListByCategory(String categoty) {
 		List<CarDTO> carsByCategory = new ArrayList<CarDTO>();
+		
 		for (int i = 0; i < listOfCars.size(); i++) {
 			CarDTO carDTO = listOfCars.get(i);
 			if (carDTO.getCcate().equalsIgnoreCase(categoty)) {
 				carsByCategory.add(carDTO);
 			}
 		}
+		
 		return carsByCategory;
 	}
+	
+	@Override
+	public CarDTO getCarById(String carId) {
+		CarDTO carInfo = null;
+		
+		for (int i = 0; i < listOfCars.size(); i++) {
+			CarDTO carDTO = listOfCars.get(i);
+			if(carDTO != null && carDTO.getCid() != null && carDTO.getCid().equals(carId)) {
+				carInfo = carDTO;
+			}
+		}
+		
+		if(carInfo == null) {
+			throw new IllegalArgumentException("자동차 ID가 " + carId + "인 자동차는 없습니다.");
+		}
+		
+		return carInfo;
+	}
+	
+	@Override
+	public void setNewCar(CarDTO car) {
+		listOfCars.add(car);
+	};
 }

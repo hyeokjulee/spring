@@ -13,22 +13,19 @@
 
 	<div class="alert alert-dark" role="alert">
 		<div class="container">
-			<h1>차량 보기</h1>
+			<h1>차량 상세 보기</h1>
 		</div>
 	</div>
 
 	<div class="container">
 		<div class="row" align="center">
-			<c:forEach items="${carList }" var="car">
-				<div class="col-md-4">
-					<h3>${car.cid }</h3>
-					<p>${car.cname }</p>
-					<p>${car.cprice } 만원</p>
-				</div>
-			</c:forEach>
+			<h3>${car.cid }</h3>
+			<p>${car.cname }</p>
+			<p>${car.cprice } 만원</p>
+			<p>${car.ccate }</p>
+			<p>${car.cdesc }</p>
 		</div>
 	</div>
-
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

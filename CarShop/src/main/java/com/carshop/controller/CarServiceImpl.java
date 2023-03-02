@@ -19,4 +19,14 @@ public class CarServiceImpl implements CarService {
 	public List<CarDTO> getCarListByCategory(String categoty) {
 		return carRepository.getCarListByCategory(categoty);
 	}
+	
+	@Override
+	public CarDTO getCarById(String carId) {
+		return carRepository.getCarById(carId);
+	}
+	
+	@Override
+	public void setNewCar(CarDTO car) {
+		carRepository.setNewCar(car);
+	};
 }
