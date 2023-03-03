@@ -38,12 +38,12 @@ public class CarController {
 		return "car/car";
 	}
 	
-	@GetMapping("/add")
+	@GetMapping("/admin/add")
 	public String requestAddCarForm(@ModelAttribute("NewCar") CarDTO car) {
 		return "car/addCar";
 	}
 	
-	@PostMapping("/add")
+	@PostMapping("/admin/add")
 	public String submitAddNewCar(@ModelAttribute("NewCar") CarDTO car) {
 		carService.setNewCar(car);
 		return "redirect:/cars";
