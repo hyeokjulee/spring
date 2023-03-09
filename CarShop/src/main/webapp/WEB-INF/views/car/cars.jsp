@@ -19,6 +19,7 @@
 		<div class="row" align="center">
 			<c:forEach items="${carList }" var="car">
 				<div class="col-md-4">
+					<img src="<c:url value="/images/${car.getCarimage().getOriginalFilename()}"/>" style="width:60%"/>
 					<h3>${car.cid }</h3>
 					<p>${car.cname }</p>
 					<p>${car.cprice } 만원</p>
@@ -28,6 +29,8 @@
 			</c:forEach>
 		</div>
 	</div>
+	
+<%=request.getSession().getServletContext().getRealPath("/") %>
 
 	<%@ include file="/WEB-INF/views/footer.jsp" %>
 </body>

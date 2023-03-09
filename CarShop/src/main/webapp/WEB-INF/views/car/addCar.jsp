@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	
-	<form:form modelAttribute="NewCar" class="form-horizontal container">
+	<form:form modelAttribute="NewCar" class="form-horizontal container" action="./add?${_csrf.parameterName }=${_csrf.token }" enctype="multipart/form-data">
 		<fieldset>
 			<legend>${addTitle }</legend>
 			자동차 ID : <form:input path="cid" class="form-control"/>
@@ -24,6 +24,7 @@
 			자동차 가격 : <form:input path="cprice" class="form-control"/>
 			자동차 카테고리 : <form:input path="ccate" class="form-control"/>
 			자동차 소개 : <form:textarea path="cdesc" cols="50" rows="2" class="form-control"/>
+			자동차 사진 : <form:input path="carimage" type="file" class="form-control"/>
 			<br>
 			<input type="submit" class="btn btn-primary" value="등록">
 		</fieldset>

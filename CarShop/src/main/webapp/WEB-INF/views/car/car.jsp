@@ -17,6 +17,7 @@
 
 	<div class="container">
 		<div class="row" align="center">
+			<img src="<c:url value="/images/${car.getCarimage().getOriginalFilename()}"/>" style="width:60%"/>
 			<h3>${car.cid }</h3>
 			<p>${car.cname }</p>
 			<p>${car.cprice } 만원</p>
